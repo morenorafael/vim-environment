@@ -19,6 +19,14 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ##### [Referencia](https://github.com/junegunn/vim-plug)
 
+### Clonamos este repositorio
+
+Clonamos el repositorio en la carpeta `~/.config/vim-environment`
+
+```bash
+git clone https://github.com/morenorafael/vim-environment.git ~/.config/vim-environment
+```
+
 ### Creamos los enlaces simbolicos
 
 ```bash
