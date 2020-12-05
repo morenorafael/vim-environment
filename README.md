@@ -25,6 +25,8 @@ Clonamos el repositorio en la carpeta `~/.config/vim-environment`
 
 ```bash
 git clone https://github.com/morenorafael/vim-environment.git ~/.config/vim-environment
+mkdir ~/.config/vim-environment/.vim
+mkdir ~/.config/vim-environment/.vim/plugged
 ```
 
 ### Creamos los enlaces simbolicos
