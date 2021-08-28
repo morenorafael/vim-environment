@@ -15,36 +15,42 @@ set t_Co=256
 
 call plug#begin('~/.vim/plugged')
 
-" Themes
-Plug 'mhartington/oceanic-next'
-
 " IDE
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'neoclide/coc-rls'
+Plug 'fannheyward/coc-pyright'
 
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-projectionist'
-Plug 'noahfrederick/vim-composer'
 Plug 'noahfrederick/vim-laravel'
+
+Plug 'vim-python/python-syntax'
+Plug 'StanAngeloff/php.vim'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
-"Theme config
-if (has("termguicolors"))
- set termguicolors
+" Theme config
+let g:material_terminal_italics = 1
+colorscheme material
+
+if (has('termguicolors'))
+  set termguicolors
 endif
 
 syntax on
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-let g:airline_theme='oceanicnext'
-
-colorscheme OceanicNext
+let g:airline_theme = 'material'
+let g:lightline = { 'colorscheme': 'material_vim' }
 
 " IDE config
 let mapleader=" "
